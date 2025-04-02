@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <title>Resort Activities</title>
+    <link rel="stylesheet" href="stylesa.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+          </div>
+        <h1>Envio Resort Activities</h1>
+    </header>
+
+    <!-- Activities Section -->
+    <section id="activities">
+        <h2>Select Your Activities</h2>
+        <div class="activity-container">
+            <!-- Activity 1 -->
+            <div class="activity">
+                <img src="images/spa.jpg" alt="Spa" class="activity-img">
+                <h3>Spa Treatment</h3>
+                <p>Relax and rejuvenate with our luxury spa treatments.</p>
+                <p class="price">Price: INR 20000</p>
+                <button class="add-to-cart" data-price="20000">Add to Cart</button>
+            </div>
+            <!-- Activity 2 -->
+            <div class="activity">
+                <img src="images/aqua.jpeg" alt="Yoga" class="activity-img">
+                <h3>Aqua Zorbing</h3>
+                <p>rolling inside a giant inflatable ball on water for a fun and unique experience!</p>
+                <p class="price">Price: INR 799</p>
+                <button class="add-to-cart" data-price="799">Add to Cart</button>
+            </div>
+            <!-- Activity 3 -->
+            <div class="activity">
+                <img src="images/zip.jpg" alt="Snorkeling" class="activity-img">
+                <h3>Zip Line</h3>
+                <p>Experience the thrill of soaring through the treetops on our zip line adventure
+                    .</p>
+                <p class="price">Price: INR 999</p>
+                <button class="add-to-cart" data-price="999">Add to Cart</button>
+            </div>
+            <!-- Activity 4 -->
+            <div class="activity">
+                <img src="images/para.jpg" alt="para" class="activity-img">
+                <h3>Parasailing</h3>
+                <p>Soar high above the ocean and take in breathtaking views.</p>
+                <p class="price">Price: INR 25000</p>
+                <button class="add-to-cart" data-price="25000">Add to Cart</button>
+            </div>
+            <!-- Activity 5 -->
+            <div class="activity">
+                <img src="images/camp.jpg" alt="camp" class="activity-img">
+                <h3>Campfire Nights</h3>
+                <p>Roast marshmallows and share stories under the stars.</p>
+                <p class="price">Price: INR 1500</p>
+                <button class="add-to-cart" data-price="1500">Add to Cart</button>
+            </div>
+            <!-- Activity 6 -->
+            <div class="activity">
+                <img src="images/rock.jpeg" alt="camp" class="activity-img">
+                <h3>Rock Climbing</h3>
+                <p>Challenge yourself with our rock climbing adventure.</p>
+                <p class="price">Price: INR 999</p>
+                <button class="add-to-cart" data-price="999">Add to Cart</button>
+            </div>
+            <!-- Activity 7 -->
+            <div class="activity">
+                <img src="images/fish.jpg" alt="camp" class="activity-img">
+                <h3>Fish Spa</h3>
+                <p>Experience a soothing fish spa adventure where tiny fish gently nibble away dead skin. </p>
+                <p class="price">Price: INR 999</p>
+                <button class="add-to-cart" data-price="999">Add to Cart</button>
+            </div>
+            <!-- Activity 8 -->
+            <div class="activity">
+                <img src="images/water.jpg" alt="camp" class="activity-img">
+                <h3>Water Slides & Pools</h3>
+                <p>Make a splash on our thrilling water slides or relax by the pool. </p>
+                <p class="price">Price: INR 999</p>
+                <button class="add-to-cart" data-price="999">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <!-- Cart Section -->
+<section id="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items">
+        <!-- Cart items will be dynamically added here -->
+    </div>
+    <p id="total-amount">Total: ₹0</p>
+
+    <!-- Stripe Checkout Button -->
+    <button  class="checkout-button" id="checkout-button">Proceed to Checkout</button>
+</section>
+
+<!-- Payment Option Section -->
+<!-- Payment Section -->
+<section id="payment-section">
+    <h2>Payment Options</h2>
+    <div class="payment-methods">
+        <label>
+            <input type="radio" name="payment" value="credit-card" checked>
+            <img src="images/credit.jpeg" alt="Credit Card"> Credit Card
+        </label>
+        <label>
+            <input type="radio" name="payment" value="debit-card">
+            <img src="images/debit.jpeg" alt="Debit Card"> Debit Card
+        </label>
+        <label>
+            <input type="radio" name="payment" value="upi">
+            <img src="images/upi.jpeg" alt="UPI"> UPI
+        </label>
+        <label>
+            <input type="radio" name="payment" value="net-banking">
+            <img src="images/net.jpeg" alt="Net Banking"> Net Banking
+        </label>
+    </div>
+    <button class="pay-now-button" id="pay-now-button">Pay Now</button>
+</section>
+
+<!-- JavaScript for pop-up success message -->
+<script>
+    document.getElementById('pay-now-button').addEventListener('click', function() {
+        // Get the selected payment method
+        const selectedPayment = document.querySelector('input[name="payment"]:checked').value;
+
+        // Display a success message
+        alert('Payment successful! You selected ' + selectedPayment + ' as your payment method.');
+
+        // You can add further actions here like redirecting to a confirmation page or resetting the form
+    });
+</script>
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>Enjoy your stay with us at the resort!</p>
+    </footer>
+
+    <!-- JavaScript (for Cart functionality) -->
+    <script src="scripta.js"></script>
+</body>
+</html>

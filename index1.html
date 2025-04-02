@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envio Resort</title>
+  <link rel="stylesheet" href="styles1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+  <header>
+    <div class="content flex_space">
+      <div class="logo">
+        <img src="images/logo.png" alt="">
+      </div>
+      <div class="navlinks">
+        <ul id="menulist">
+          <li><a href="index1.html">home</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="rooms.html">rooms</a></li>
+          <li><a href="#gallery">gallery</a></li>
+          <li><a href="#services">services</a></li>
+          <li><a href="indexr.html">restaurant</a></li>
+          <li><a href="indexa.html">activities</a></li>
+          <li><a href="#contact">contact</a></li>
+          
+          <!-- Booking Button -->
+          <li><a href="booking.html"><button class="primary-btn">BOOK NOW</button></a></li> 
+        </ul>
+        <span class="fa fa-bars" onclick="menutoggle()"></span>
+      </div>
+    </div>
+  </header>
+  
+  <script>
+    var menulist = document.getElementById('menulist');
+    menulist.style.maxHeight = "0px";
+  
+    function menutoggle() {
+      if (menulist.style.maxHeight == "0px") {
+        menulist.style.maxHeight = "100vh";
+      } else {
+        menulist.style.maxHeight = "0px";
+      }
+    }
+  </script>
+  
+
+  
+  
+
+  <section class="home">
+    <div class="content">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <video autoplay muted loop>
+                    <source src="video/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="text">
+                    <h1>Spend Your Holiday</h1>
+                    <p>Unplug, unwind, and let the rhythm of nature refresh your mind and soul.</p>
+                    <div class="flex">
+                        <button class="primary-btn">READ MORE</button>
+                        <button class="secondary-btn">CONTACT US</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <video autoplay muted loop>
+                    <source src="video/video4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="text">
+                    <h1>Spend Your Holiday</h1>
+                    <p>A resort is not just a place; it’s a state of mind where relaxation and rejuvenation are key.</p>
+                    <div class="flex">
+                        <button class="primary-btn">READ MORE</button>
+                        <button class="secondary-btn">CONTACT US</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <video autoplay muted loop>
+                    <source src="video/video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="text">
+                    <h1>Spend Your Holiday</h1>
+                    <p>Where the sunsets are golden, the air is pure, and every moment feels like a dream.</p>
+                    <div class="flex">
+                        <button class="primary-btn">READ MORE</button>
+                        <button class="secondary-btn">CONTACT US</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  $(document).ready(function() {
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 1 // Change this based on your preference
+        },
+        1000: {
+          items: 1 // Change this based on your preference
+        }
+      }
+    });
+  });
+</script>
+
+
+<section class="book">
+  <div class="container flex_space" style="display: flex; flex-direction: column; align-items: center;">
+      <div class="text">
+          <h1><span>Book </span>Your Rooms</h1>
+      </div>
+      <div class="form">
+          <form class="grid" >
+              <input type="date" name="arrival-date" placeholder="Arrival Date" required>
+              <input type="date" name="departure-date" placeholder="Departure Date" required>
+              <input type="number" name="adults" placeholder="Adults" required min="1">
+              <input type="number" name="children" placeholder="Children" min="0">
+              <button type="submit" class="primary-btn">CHECK AVAILABILITY</button>
+          </form>
+      </div>
+  </div>
+</section>
+
+
+
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="heading">
+          <h1>WELCOME</h1>
+          <h2>Envio Resort</h2>
+        </div>
+        <p>Envio Resort is a luxurious retreat known for offering a premium experience that blends relaxation with nature. Guests can expect modern, well-designed accommodations, often featuring scenic views of the surrounding landscapes, whether it's beaches, mountains, or lush greenery. The resort typically boasts a spa and wellness center, where visitors can indulge in massages, beauty treatments, and other rejuvenating therapies. Fine dining is a key part of the experience, with restaurants offering both local and international cuisine made from fresh, organic ingredients. Envio Resort also provides a range of recreational activities, such as water sports, hiking, and access to fitness centers and pools, ensuring there’s something for everyone. Many of these resorts also cater to events like weddings and corporate retreats, with dedicated spaces and services. Additionally, Envio Resort often emphasizes sustainability and eco-friendly practices, making it a responsible choice for environmentally conscious travelers.</p>
+        <button class="primary-btn">ABOUT US</button>
+      </div>
+      <div class="right">
+        <img src="images/about.jpg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="counter top">
+    <div class="container grid">
+        <div class="box">
+            <h1>2500</h1>
+            <hr>
+            <span>Customer</span>
+        </div>
+        <div class="box">
+            <h1>1250</h1>
+            <hr>
+            <span>Happy Customer</span>
+        </div>
+        <div class="box">
+            <h1>30</h1>
+            <hr>
+            <span>Experts</span>
+        </div>
+        <div class="box">
+            <h1>150</h1>
+            <hr>
+            <span>Specialized staff</span>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+  <section class="gallery" id="gallery">
+    <div class="container top">
+      <div class="heading">
+        <h1>PHOTOS</h1>
+        <h2>Our Gallery</h2>
+        <p>Filled with loads of sweet memories...
+      </div>
+    </div>
+
+    <div class="content mtop">
+      <div class="owl-carousel owl-carousel1 owl-theme">
+        <div class="items">
+          <div class="img">
+            <img src="images/gal1.jpg" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Photo Title Here.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gal2.jpg" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Photo Title Here.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gal3.jpg" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Photo Title Here.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gal4.jpg" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Photo Title Here.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gal5.jpg" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Photo Title Here.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gal6.jpg" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Photo Title Here.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gal7.jpg" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Photo Title Here.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gal8.jpg" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Photo Title Here.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gal9.jpg" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Photo Title Here.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gal10.jpg" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Photo Title Here.</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    $('.owl-carousel1').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: true,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 1000,
+      autoplayHoverPause: true,
+      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 4,
+        },
+        1000: {
+          items: 6
+        }
+      }
+    })
+  </script>
+
+
+
+    <!-- Resort Services Section -->
+    <section class="resort-services" id="services">
+        <h1 class="services-heading">Our Exclusive Services</h1>
+        <p class="services-description">Experience luxury and comfort with our exceptional services</p>
+
+        <div class="service-grid">
+            <div class="service-item">
+                <div class="service-icon">
+                    <img src="images/massage.png" alt="Spa Icon">
+                </div>
+                <h3>Spa & Wellness</h3>
+                <p>Relax and rejuvenate with our premium spa and wellness services.</p>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon">
+                    <img src="images/swimming-pool.png" alt="Swimming Pool Icon">
+                </div>
+                <h3>Infinity Pool</h3>
+                <p>Enjoy the panoramic views from our stunning infinity pool.</p>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon">
+                    <img src="images/dining.png" alt="Restaurant Icon">
+                </div>
+                <h3>Fine Dining</h3>
+                <p>Delight your taste buds with gourmet dishes at our fine dining restaurant.</p>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon">
+                    <img src="images/gym.png" alt="Gym Icon">
+                </div>
+                <h3>Fitness Center</h3>
+                <p>Stay in shape with our fully equipped fitness center.</p>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon">
+                    <img src="images/beachpri.png" alt="Private Beach Icon">
+                </div>
+                <h3>Private Beach</h3>
+                <p>Relax in the tranquility of our private beach with crystal-clear waters.</p>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon">
+                    <img src="images/kids.png" alt="Kids Club Icon">
+                </div>
+                <h3>Kids Club</h3>
+                <p>A fun-filled area for children with a variety of activities.</p>
+            </div>
+            <div class="service-item">
+              <div class="service-icon">
+                  <img src="images/yoga.png" alt="Yoga Icon">
+              </div>
+              <h3>Yoga Sessions</h3>
+              <p>Find inner peace and balance with our expert-led yoga sessions in serene surroundings.</p>
+          </div>
+          
+          <div class="service-item">
+              <div class="service-icon">
+                  <img src="images/events.png" alt="Event Planning Icon">
+              </div>
+              <h3>Event Planning</h3>
+              <p>Let us help you create unforgettable moments with our professional event planning services.</p>
+          </div>
+          
+        </div>
+    </section>
+
+
+
+
+
+
+
+<body>
+    <section id="activities">
+        <h2>Resort Activities</h2>
+        <div class="activities-container">
+            <div class="activity-card">
+                <img src="images/beach.jpg" alt="Beach">
+                <h3>Beach Relaxation</h3>
+                <p>Enjoy the serene beach, sunbathe, or take a refreshing swim.</p>
+            </div>
+            <div class="activity-card">
+                <img src="images/spa.jpg" alt="Spa">
+                <h3>Spa & Wellness</h3>
+                <p>Unwind with our luxurious spa treatments and wellness programs.</p>
+            </div>
+            <div class="activity-card">
+                <img src="images/hiking.jpg" alt="Hiking">
+                <h3>Mountain Hiking</h3>
+                <p>Explore scenic trails and enjoy the beauty of nature.</p>
+            </div>
+            <div class="activity-card">
+                <img src="images/others.jpg" alt="Dining">
+                <h3>Fun Activities</h3>
+                <p>Make a splash on our thrilling activities.</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+
+  <footer>
+    <div class="container grid" id="contact">
+      <div class="box">
+        <img src="images/logo.png" alt="">
+        <p>Envio Resort is a luxurious retreat known for offering a premium experience that blends relaxation with nature.</p>
+
+        <div class="icon">
+          <i class="fa fa-facebook-f"></i>
+          <i class="fa fa-instagram"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-youtube"></i>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>Links</h2>
+        <ul>
+          <li>Company History</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Services</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h2>Contact Us</h2>
+        <p>For any queres contact us.
+        </p>
+        <i class="fa fa-location-dot"></i>
+        <label>1201 park street, Avenue, Dhanmondy, Dhaka. </label> <br>
+        <i class="fa fa-phone"></i>
+        <label>[88] 657 524 332</label> <br>
+        <i class="fa fa-envelope"></i>
+        <label>info@envioresort.com</label> <br>
+      </div>
+    </div>
+  </footer>
+
+  <div class="legal">
+    <p class="container">Copyright (c) 2022 Copyright Holder All Rights Reserved.</p>
+  </div>
+
+
+
+  
+  <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
+  
+
+</body>
+
+</html>

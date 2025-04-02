@@ -1,0 +1,489 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10vh; 
+    line-height: 10vh; 
+    background: #f0f0f0; 
+    z-index: 1000;
+ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-section {
+    flex: 1;
+    text-align: center;
+}
+
+.header-left, .header-right {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-center img {
+    width: 150px;
+}
+
+/* Introduction Styles */
+.introduction {
+    position: relative;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.introduction-content {
+    z-index: 1;
+}
+
+.heading {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.desc {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 10px 20px;
+  
+  background-color:#7fc142 ;
+    
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #7fc142;
+}
+
+/* Meal Section Styles */
+/* Meal Section Styles */
+.meal-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.meal {
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+
+.meal img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Hover effect */
+.meal:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.meal-name {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.2em; /* Increase font size for better visibility */
+}
+
+/* Offers Section Styles */
+/* Offers Section Styles */
+.offers {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f8f9fa; /* Light background color for contrast */
+}
+
+.offers-heading1,
+.offers-heading2 {
+    display: block;
+    font-size: 2em;
+    margin: 20px 0;
+    color: #333;
+}
+
+.discount-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+.discount-card {
+    background-color: #ffffff; /* White background for cards */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 15px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+    width: calc(30% - 30px); /* Adjust width based on available space */
+    position: relative; /* Positioning for the discount badge */
+}
+
+.discount-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.offer-name {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 15px 0 5px;
+    color: #343a40; /* Darker color for text */
+}
+
+.offer-description {
+    font-size: 1em;
+    color: #6c757d; /* Grey color for description */
+}
+
+.off {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #7fc142; /* Red background for discount badge */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.discount-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deepen shadow on hover */
+}
+
+
+/* Menu Section Styles */
+/* Menu Section Styles */
+.menu-container {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #ffffff; /* Light background for contrast */
+}
+
+.menu-heading1,
+.menu-heading2 {
+    display: block;
+    font-size: 2.5em;
+    margin: 20px 0;
+    color: #333;
+    text-transform: uppercase; /* Uppercase for a stylish look */
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.menu-content {
+    background-color: #f8f9fa; /* Light grey background for cards */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Ensure content fits within rounded corners */
+    margin: 15px;
+    width: calc(25% - 30px); /* Adjust width for responsive layout */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+}
+
+.menu-content img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #7fc142; /* Stylish border for the image */
+}
+
+.food-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.food-name {
+    font-weight: bold;
+    font-size: 1.8em;
+    color: #343a40; /* Darker color for text */
+}
+
+.food-description {
+    font-size: 1em;
+    color: #6c757d; /* Grey color for description */
+    margin: 10px 0;
+}
+
+.food-cost {
+    font-weight: bold;
+    color: #28a745; /* Green color for cost */
+}
+
+.menu-content:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Deepen shadow on hover */
+}
+
+
+/* Reservation Section Styles */
+/* Reservation Section Styles */
+.reservation-container {
+    background-color: #f2f2f2; /* Light grey background for contrast */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.reservation-heading {
+    font-size: 2.5em;
+    color: #7fc142; /* Main color for headings */
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Uppercase for emphasis */
+}
+
+.reservation-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allow items to wrap for smaller screens */
+    max-width: 800px; /* Limit the max width for better readability */
+    margin: 0 auto; /* Center the content */
+}
+
+.time-container {
+    background-color: #fff; /* White background for the time container */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    padding: 30px;
+    margin: 20px;
+    transition: transform 0.3s ease; /* Animation for hover effect */
+}
+
+.time-container:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.times {
+    width: 100%;
+}
+
+.time-section {
+    margin-bottom: 15px; /* Space between time sections */
+}
+
+.time {
+    font-weight: bold;
+    font-size: 1.8em; /* Larger font for the title */
+    color: #343a40; /* Darker color for the title */
+}
+
+.day {
+    font-weight: bold;
+    color: #28a745; /* Green for the days */
+    font-size: 1.2em; /* Slightly larger for emphasis */
+}
+
+.hour {
+    color: #6c757d; /* Grey color for hours */
+    font-size: 1em;
+    margin-left: 10px; /* Indent hours for better readability */
+}
+
+.phone {
+    font-size: 1.2em; /* Slightly larger for phone number */
+    color: #7fc142; /* Main color for phone number */
+    margin-top: 15px; /* Space above phone number */
+}
+
+/* Booking Form Styles */
+/* Booking Form Styles */
+.booking-container {
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 40px;
+    max-width: 600px; /* Maximum width for the form */
+    margin: 40px auto; /* Center the form */
+    text-align: center;
+}
+
+.booking-heading1 {
+    font-size: 2em;
+    color: #7fc142; /* Main color for headings */
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Uppercase for emphasis */
+}
+
+.booking-heading2 {
+    font-size: 1.5em;
+    color: #6c757d; /* Secondary color for subheading */
+    margin-bottom: 20px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column; /* Stack the inputs vertically */
+}
+
+.book-input {
+    padding: 12px;
+    margin: 10px 0; /* Space between inputs */
+    border: 2px solid #dee2e6; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1em;
+    transition: border-color 0.3s; /* Transition for focus effect */
+}
+
+.book-input:focus {
+    border-color: #7fc142; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.btn {
+    padding: 12px;
+    background-color: #7fc142; /* Main color for button */
+    color: white; /* White text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1em;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+    margin-top: 10px; /* Space above button */
+}
+
+.btn:hover {
+    background-color: #7fc142; /* Darker shade on hover */
+}
+
+/* Footer Styles */
+/* Footer Styles */
+footer {
+    background-color: #343a40; /* Dark background */
+    color: #ffffff; /* White text for contrast */
+    padding: 40px 0; /* Padding around the footer */
+}
+
+.container {
+    max-width: 1200px; /* Maximum width for the content */
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px; /* Side padding */
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Space between boxes */
+}
+
+.box {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+}
+
+.box img {
+    width: 150px; /* Fixed width for logo */
+    margin-bottom: 15px; /* Space below logo */
+}
+
+h2 {
+    font-size: 1.5em; /* Heading size */
+    margin-bottom: 15px; /* Space below heading */
+}
+
+p {
+    margin-bottom: 15px; /* Space below paragraph */
+}
+
+.icon {
+    display: flex; /* Flex for social icons */
+    gap: 15px; /* Space between icons */
+    margin-top: 10px; /* Space above icons */
+}
+
+.social-icon {
+    color: #ffffff; /* White icon color */
+    font-size: 20px; /* Icon size */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+.social-icon:hover {
+    color: #7fc142; /* Color change on hover */
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+ul li {
+    margin: 10px 0; /* Space between links */
+}
+
+ul li a {
+    color: #ffffff; /* White link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+ul li a:hover {
+    color: #7fc142; /* Color change on hover */
+}
+
+.contact-info {
+    display: flex; /* Flex layout for contact info */
+    align-items: center; /* Center align items */
+    margin-bottom: 10px; /* Space below each contact info */
+}
+
+.contact-info label {
+    margin-left: 10px; /* Space between icon and label */
+}
+
+.legal {
+    background-color: #23272b; /* Darker background for legal text */
+    text-align: center; /* Center align text */
+    padding: 10px 0; /* Padding for legal section */
+}

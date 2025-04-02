@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="rooms.css"> <!-- Your CSS file -->
+    <title>Hotel Rooms</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="header-section">
+            <div class="header-left">
+                <a href="#home">Home</a>
+                
+                
+            </div>
+        </div>
+        <div class="header-section">
+            <div class="header-center">
+                <a href="#">
+                    <img src="images/logo.png" alt="logo">
+                </a>
+            </div>
+        </div>
+        <div class="header-section">
+            <div class="header-right">
+                <a href="#rooms">Rooms</a>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Introduction Section with Video Background -->
+    <div class="introduction">
+        <video class="background-video" src="video/video5.mp4" autoplay muted loop></video>
+        <div class="introduction-content">
+            <div class="heading">
+                <span>Welcome to</span>
+                <span>Our Envio Resort</span>
+            </div>
+            <div class="desc">Experience luxury and comfort!</div>
+        </div>
+    </div>
+
+    <!-- Rooms Section -->
+    <!-- Rooms Section -->
+<div class="rooms-container" id="rooms">
+    <h1 class="rooms-heading1">Our Rooms</h1>
+    <h2 class="rooms-heading2">Choose Your Perfect Stay</h2>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide room">
+                <img src="images/premium.jpg" alt="Room 1">
+                <div class="room-content">
+                    <h3 class="room-name">Premium Room</h3>
+                    <p class="room-description">A spacious room with modern amenities.</p>
+                    <span class="room-cost">Starts from ₹7000</span>
+                    <li><a href="booking.html"><button class="primary-btn">BOOK NOW</button></a></li> 
+                </div>
+            </div>
+            <div class="swiper-slide room">
+                <img src="images/luxury.jpg" alt="Room 2">
+                <div class="room-content">
+                    <h3 class="room-name">Luxury Room</h3>
+                    <p class="room-description">A luxurious suite with stunning views.</p>
+                    <span class="room-cost">Starts from ₹10000</span>
+                    <li><a href="booking.html"><button class="primary-btn">BOOK NOW</button></a></li> 
+                </div>
+            </div>
+            <div class="swiper-slide room">
+                <img src="images/family.jpg" alt="Room 3">
+                <div class="room-content">
+                    <h3 class="room-name">Family Cottage</h3>
+                    <p class="room-description">Perfect for families with extra space.</p>
+                    <span class="room-cost">Starts from ₹15000</span>
+                    <li><a href="booking.html"><button class="primary-btn">BOOK NOW</button></a></li> 
+                </div>
+            </div>
+            <div class="swiper-slide room">
+                <img src="images/tree.jpg" alt="Room 4">
+                <div class="room-content">
+                    <h3 class="room-name">Tree House</h3>
+                    <p class="room-description">Cozy room for solo travelers.</p>
+                    <span class="room-cost">Starts from ₹3500</span>
+                    <li><a href="booking.html"><button class="primary-btn">BOOK NOW</button></a></li> 
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Swiper Navigation Buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+
+    
+
+      <!-- Offer Pop-Up Modal -->
+<div class="offer-popup" id="offerPopup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h1 class="popup-heading">Exclusive Room Offers</h1>
+        <div class="popup-offers">
+            <div class="popup-offer">
+                <img src="images/off1.jpg" alt="Weekend Getaway">
+                <h3>Weekend Getaway</h3>
+                <p>Enjoy a special weekend rate for two nights, including breakfast.</p>
+                <span class="popup-price">Starts from ₹4000</span>
+                <span class="popup-discount">20% OFF</span>
+                <a href="booking.html?offer=Weekend%20Getaway&price=4000" class="popup-btn">Book Now</a>
+            </div>
+            <div class="popup-offer">
+                <img src="images/off1.jpg" alt="Midweek Stay Special">
+                <h3>Midweek Stay Special</h3>
+                <p>Get an exclusive rate for stays from Monday to Thursday.</p>
+                <span class="popup-price">Starts from ₹3000</span>
+                <span class="popup-discount">15% OFF</span>
+                <a href="booking.html?offer=Midweek%20Stay%20Special&price=3000" class="popup-btn">Book Now</a>
+            </div>
+            <div class="popup-offer">
+                <img src="images/off1.jpg" alt="Family Package">
+                <h3>Family Package</h3>
+                <p>Bring the whole family and enjoy extra space and fun activities.</p>
+                <span class="popup-price">Starts from ₹5000</span>
+                <span class="popup-discount">25% OFF</span>
+                <a href="booking.html?offer=Family%20Package&price=5000" class="popup-btn">Book Now</a>
+            </div>
+            <div class="popup-offer">
+                <img src="images/off1.jpg" alt="Romantic Escape">
+                <h3>Romantic Escape</h3>
+                <p>Enjoy a romantic dinner and a bottle of wine with your stay.</p>
+                <span class="popup-price">Starts from ₹6000</span>
+                <span class="popup-discount">30% OFF</span>
+                <a href="booking.html?offer=Romantic%20Escape&price=6000" class="popup-btn">Book Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Trigger Button -->
+<button class="trigger-popup" onclick="showPopup()">View Offers</button>
+  
+
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; Envio Resort. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
+        });
+
+        function submitReservation() {
+            const person = document.getElementById("person").value;
+            const date = document.getElementById("date").value;
+            const time = document.getElementById("time").value;
+            const name = document.getElementById("name").value;
+            const phone = document.getElementById("phone").value;
+            const email = document.getElementById("email").value;
+
+            alert("Reservation successfully made for " + person + " person(s) on " + date + " at " + time + ".\nName: " + name + "\nPhone: " + phone + "\nEmail: " + email);
+            return true; // Allow form submission
+        }
+
+
+    </script>
+
+
+<script src="rooms.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resort Booking with Payment</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+
+    <div class="booking-container">
+        <h1>Envio Resort Booking</h1>
+
+        <form class="booking-form" id="bookingForm" onsubmit="return confirmBooking()">
+            <!-- Resort Selection -->
+            <label for="resort">Select Resort:</label>
+            <select id="resort" name="resort">
+                <option value="Envio Resort Coorg">Envio Resort Coorg </option>
+                <option value="Envio Resort Manali">Envio Resort Manali</option>
+                <option value="Envio Resort Kerala">Envio Resort Kerala</option>
+                <option value="Envio Resort Ooty">Envio Resort Ooty</option>
+            </select>
+
+            <!-- Check-in and Check-out Dates -->
+            <label for="checkin">Check-in Date:</label>
+            <input type="date" id="checkin" name="checkin" required>
+
+            <label for="checkout">Check-out Date:</label>
+            <input type="date" id="checkout" name="checkout" required>
+
+            <!-- Number of Guests -->
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" max="10" required>
+
+            <!-- Room Selection -->
+            <label for="room">Select Room:</label>
+            <select id="room" name="roomt">
+                <option value="premium room">Premium Room</option>
+                <option value="luxury room">Luxury Room</option>
+                <option value="attached pool">Attached pool</option>
+                <option value="family cottage">Family Cottage</option>
+                <option value="bamboo house">Bamboo House</option>
+                <option value="tree house">Tree House</option>
+                <option value="mud house">Mud House</option>
+                <option value="wooden house">Wooden House</option>
+            </select>
+
+            <!-- Payment Section -->
+<h2>Payment Details</h2>
+<form id="payment-form" onsubmit="return confirmBooking();">
+
+    <!-- Name on Card -->
+    <label for="card-name">Name on Card:</label>
+    <input type="text" id="card-name" name="card-name" placeholder="John Doe" required>
+
+    <!-- Credit Card Number -->
+    <label for="card-number">Card Number:</label>
+    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required pattern="\d{4} \d{4} \d{4} \d{4}">
+
+    <!-- CVV Number -->
+    <label for="cvv">CVV:</label>
+    <input type="text" id="cvv" name="cvv" placeholder="123" required pattern="\d{3}">
+
+    <!-- Expiry Date -->
+    <label for="expiry">Expiry Date (MM/YY):</label>
+    <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required pattern="\d{2}/\d{2}">
+
+    <!-- Submit Button -->
+    <button type="submit">Book and Pay</button>
+</form>
+
+<!-- JavaScript to handle the payment confirmation and validation -->
+<script>
+    function confirmBooking() {
+        // Retrieve the card details for validation
+        var cardName = document.getElementById("card-name").value;
+        var cardNumber = document.getElementById("card-number").value;
+        var cvv = document.getElementById("cvv").value;
+        var expiry = document.getElementById("expiry").value;
+
+        // Validate card number (simple regex validation)
+        var cardNumberPattern = /^\d{4} \d{4} \d{4} \d{4}$/;
+        var cvvPattern = /^\d{3}$/;
+        var expiryPattern = /^\d{2}\/\d{2}$/;
+
+        if (!cardNumberPattern.test(cardNumber)) {
+            alert("Please enter a valid card number in the format 1234 5678 9012 3456.");
+            return false;  // prevent form submission
+        }
+
+        if (!cvvPattern.test(cvv)) {
+            alert("Please enter a valid 3-digit CVV.");
+            return false;  // prevent form submission
+        }
+
+        if (!expiryPattern.test(expiry)) {
+            alert("Please enter a valid expiry date in MM/YY format.");
+            return false;  // prevent form submission
+        }
+
+        // Show confirmation pop-up
+        alert("Thank you for booking! Your payment has been processed successfully.");
+
+        // Simulate form submission (in real integration, proceed with the payment gateway)
+        return true;  // allow the form to submit
+    }
+</script>
+
+
+    
+
+
+</body>
+</html>
